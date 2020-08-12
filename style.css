@@ -12,3 +12,13 @@ body {
     height: 100vh;
     margin: 0;
 }
+
+.show-container {
+    margin: 20px 0;
+}
+
+.show-container select {
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
