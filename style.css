@@ -22,3 +22,24 @@ body {
     padding: 5px 10px;
     margin-left: 10px;
 }
+
+.seat {
+    background-color: #3d445c;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.seat.selected {
+    background-color: #39e3e3;
+}
+
+.seat.occupied {
+    background-color: white;
+}
+
+.row {
+    display: flex;
+}
