@@ -58,3 +58,18 @@ body {
     display: flex;
 }
 
+.showcase {
+    display: flex;
+    padding: 5px 10px;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.showcase li {
+    display: flex;
+    margin: 0 10px;
+}
+
+.showcase small {
+    margin-left: 2px;
+}
