@@ -73,3 +73,12 @@ body {
 .showcase small {
     margin-left: 2px;
 }
+
+.screen {
+    background-color: white;
+    height: 140px;
+    width: 220px;
+    margin: 15px 0px;
+    transform: rotateX(-45deg);  
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
