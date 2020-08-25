@@ -14,6 +14,12 @@ const updateSelectedCount = () => {
     total.innerText = selectedSeatsCount * ticketPrice
 }
 
+//Show select event
+showSelect.addEventListener('change', e => {
+    ticketPrice = +e.target.value
+    updateSelectedCount()
+})
+
 // Seat click event
 seatingArea.addEventListener('click', e => {
     if (
