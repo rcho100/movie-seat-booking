@@ -82,3 +82,7 @@ body {
     transform: rotateX(-45deg);  
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
 }
+
+p.text span {
+    color: #39e3e3;
+}
