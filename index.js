@@ -4,6 +4,8 @@ const showSelect = document.querySelector('.show')
 const count = document.getElementById('count')
 const total = document.getElementById('total')
 
+populateUI();
+
 let ticketPrice = +showSelect.value
 
 //Save selected show index & price
@@ -23,6 +25,19 @@ const updateSelectedCount = () => {
 
     count.innerText = selectedSeatsCount
     total.innerText = selectedSeatsCount * ticketPrice
+}
+
+//Get data from localStorage & populate UI
+function populateUI() {
+    const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'))
+
+    if (selectedSeats !== null && selectedSeats.length > 0) {
+        seats.forEach((seat, index) => {
+            if (selectedSeats.indexOf(index) > -1) {
+                seat.classList.add('selected')
+            }
+        })
+    }
 }
 
 //Show select event
