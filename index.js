@@ -38,6 +38,12 @@ function populateUI() {
             }
         })
     }
+
+    const selectedShowIndex  = localStorage.getItem('selectedShowIndex')
+
+    if (selectedShowIndex !== null) {
+        showSelect.selectedIndex = selectedShowIndex
+    }
 }
 
 //Show select event
