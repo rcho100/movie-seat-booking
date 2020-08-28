@@ -15,7 +15,7 @@ const setShowData = (showIndex, showPrice) => {
 }
 
 //Update total and count
-const updateSelectedCount = () => {
+const updateSelectedCountAndTotal = () => {
     const selectedSeats = document.querySelectorAll('.row .seat.selected')
 
     const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat))
@@ -50,7 +50,7 @@ function populateUI() {
 showSelect.addEventListener('change', e => {
     ticketPrice = +e.target.value
     setShowData(e.target.selectedIndex, e.target.value)
-    updateSelectedCount()
+    updateSelectedCountAndTotal()
 })
 
 // Seat click event
@@ -60,6 +60,9 @@ seatingArea.addEventListener('click', e => {
     ) {
         e.target.classList.toggle('selected')
 
-        updateSelectedCount()
+        updateSelectedCountAndTotal()
     }
 })
+
+// Initial count and total set
+updateSelectedCountAndTotal()
